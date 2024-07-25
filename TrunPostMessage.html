@@ -7,8 +7,8 @@
             const message = { text: 'Hello from HTML!' };
             // Replace 'maui-app' with the target origin (e.g., 'http://localhost:8000') if known
             alert("Before sending");
-            //window.parent.postMessage(message, '*');
-            document.parent.postMessage(message, '*');
+            window.parent.postMessage(message, '*');
+            //document.parent.postMessage(message, '*');
             alert("After sending");
         }
     </script>
