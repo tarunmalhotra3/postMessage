@@ -11,6 +11,14 @@
             //document.parent.postMessage(message, '*');
             alert("After sending");
         }
+
+        function postMessageHandler( event ) {
+          alert("We've got a message!");
+          alert("* Message:", event.data);
+          alert("* Origin:", event.origin);
+          alert("* Source:", event.source);
+        }
+
     </script>
 </head>
 <body>
