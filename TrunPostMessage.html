@@ -6,19 +6,11 @@
         function sendMessageToMAUI() {
             const message = { text: 'Hello from HTML!' };
             // Replace 'maui-app' with the target origin (e.g., 'http://localhost:8000') if known
-            alert("Before sending");
+            alert("Yo! Before sending");
             window.parent.postMessage(message, '*');
             //document.parent.postMessage(message, '*');
             alert("After sending");
         }
-
-        function postMessageHandler( event ) {
-          alert("We've got a message!");
-          alert("* Message:", event.data);
-          alert("* Origin:", event.origin);
-          alert("* Source:", event.source);
-        }
-
     </script>
 </head>
 <body>
