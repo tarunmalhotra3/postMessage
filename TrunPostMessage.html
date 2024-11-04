@@ -8,12 +8,9 @@
             // Replace 'maui-app' with the target origin (e.g., 'http://localhost:8000') if known
             alert("Yo! Before sending");
             
-            //commenting for Ravi g
-            //window.parent.postMessage(message, '*'); 
+            window.parent.postMessage(message, '*'); 
             //document.parent.postMessage(message, '*');
 
-            //Ravi g k liye - 
-            document.parent.postMessage(message, '*');
             alert("After sending");
         }
     </script>
