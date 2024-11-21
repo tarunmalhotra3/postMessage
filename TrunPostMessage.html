@@ -7,7 +7,9 @@
     <script>
         var counterz = 1;
         function buttonClicked(e) {		
-    		invokeCSharpAction("kuch aur text");
+    		//invokeCSharpAction("kuch aur text");
+            const messagez = { text: 'Hello from HTML!' };
+            window.parent.postMessage(messagez, '*'); 
         }
      
         function nativeDemand(data) {
