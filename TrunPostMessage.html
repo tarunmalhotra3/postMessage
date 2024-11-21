@@ -17,13 +17,11 @@
         function sendMessageToMAUI() {
             const message = { text: 'Hello from HTML!' };
             // Replace 'maui-app' with the target origin (e.g., 'http://localhost:8000') if known
-            alert("Yo! Before sending");
             
             window.parent.postMessage(message, '*'); 
             //document.parent.postMessage(message, '*');
 
-            alert("After sending");
-
+          
             setTimeout(3000);
     window.location.href = "www.google.com";
         }
@@ -37,6 +35,6 @@
 </head>
 <body>
     <h1>Trun Page</h1>
-    <button onclick="sendMessageToMAUI()">Send Message to MAUI</button>
+    <button onclick='javascript:buttonClicked(event)'>Send Message to MAUI</button>
 </body>
 </html>
