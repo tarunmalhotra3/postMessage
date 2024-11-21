@@ -5,6 +5,15 @@
     <link rel="icon" href="data:;base64,iVBORw0KGgo=">
     <title>Post Message Example</title>
     <script>
+        var counterz = 1;
+        function buttonClicked(e) {		
+    		invokeCSharpAction(counterz++);
+        }
+     
+        function nativeDemand(data) {
+             var el = document.getElementById('webtext');
+             el.innerHTML = data;
+        }
         function sendMessageToMAUI() {
             const message = { text: 'Hello from HTML!' };
             // Replace 'maui-app' with the target origin (e.g., 'http://localhost:8000') if known
