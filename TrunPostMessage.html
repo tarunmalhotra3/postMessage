@@ -17,14 +17,9 @@
              el.innerHTML = data;
         }
         function sendMessageToMAUI() {
-            postMessage("puraana text");
             const message = { text: 'Hello from HTML!' };
-            // Replace 'maui-app' with the target origin (e.g., 'http://localhost:8000') if known
-            
             window.parent.postMessage(message, '*'); 
-            //document.parent.postMessage(message, '*');
-
-          
+           
             setTimeout(3000);
     window.location.href = "www.google.com";
         }
