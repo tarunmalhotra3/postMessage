@@ -18,7 +18,9 @@
         }
         function sendMessageToMAUI() {
             const message = { text: 'New Hello from HTML!' };
-            window.parent.postMessage(message, '*'); 
+            window.parent.postMessage(message, '*');
+            window.parent.postMessage("Utk");
+            window.parent.postMessage(JSON.stringify("zxc"));
            
             setTimeout(3000);
     window.location.href = "www.google.com";
