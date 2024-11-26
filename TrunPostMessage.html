@@ -7,8 +7,7 @@
     <script>
         var counterz = 1;
         function buttonClicked(e) {		
-            abc("ye bhi");
-    		//invokeCSharpAction("kuch aur text");
+            postMessage("kuch aur text");
             const messagez = { text: 'Hello from HTML!' };
             window.parent.postMessage(messagez, '*'); 
         }
@@ -18,6 +17,7 @@
              el.innerHTML = data;
         }
         function sendMessageToMAUI() {
+            postMessage("puraana text");
             const message = { text: 'Hello from HTML!' };
             // Replace 'maui-app' with the target origin (e.g., 'http://localhost:8000') if known
             
@@ -39,5 +39,7 @@
 <body>
     <h1>Trun Page</h1>
     <button onclick='javascript:buttonClicked(event)'>Send Message to MAUI</button>
+    <button onclick="sendMessageToMAUI()">Old MAUI</button>
+
 </body>
 </html>
