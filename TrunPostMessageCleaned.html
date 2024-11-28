@@ -1,0 +1,42 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="data:;base64,iVBORw0KGgo=">
+    <title>Post Message Example</title>
+    <script>
+        var counterz = 1;
+        function buttonClicked(e) {		
+            postMessage("kuch aur text");
+            const messagez = { text: 'Hello from HTML!' };
+            window.parent.postMessage(messagez, '*'); 
+        }
+     
+        function nativeDemand(data) {
+             var el = document.getElementById('webtext');
+             el.innerHTML = data;
+        }
+        function sendMessageToMAUI() {
+            const message = { text: 'New Hello from HTML!' };
+            window.parent.postMessage(message, '*');
+            window.parent.postMessage("Utk");
+            window.parent.postMessage(JSON.stringify("zxc"));
+           
+            setTimeout(3000);
+    window.location.href = "www.google.com";
+        }
+
+        // Listener for `postMessage` that assigns message to a variable
+        window.addEventListener('message', function(event) {
+            window.receivedData = event.data;  // Store message in a global variable
+        });
+        
+    </script>
+</head>
+<body>
+    <h1>Trun Page</h1>
+    <button onclick='javascript:buttonClicked(event)'>Send Message to MAUI</button>
+    <button onclick="sendMessageToMAUI()">Old MAUI</button>
+
+</body>
+</html>
