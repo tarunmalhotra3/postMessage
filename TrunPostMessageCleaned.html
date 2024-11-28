@@ -9,13 +9,7 @@
             //const message = { text: 'New Hello from HTML!' };
             const message = "New Hello from HTML!";
             window.parent.postMessage(message);
-        }
-
-        // Listener for `postMessage` that assigns message to a variable
-        window.addEventListener('message', function(event) {
-            window.receivedData = event.data;  // Store message in a global variable
-        });
-        
+        }        
     </script>
 </head>
 <body>
