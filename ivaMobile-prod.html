@@ -1,0 +1,37 @@
+
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0 maximum-scale=1.0 user-scalable=no" charset="utf-8" />
+	<script id="nit-alme-main" type="text/javascript" language="javascript" src="https://hewitt-2.nextit.com/Alme/nextit-script-manager.js"></script>
+    <script type="text/javascript">
+		var confData = [];
+        function CheckJsonParsingFunc(configData) 
+		{
+			confData = configData;
+        }
+        checkIvaInputs();
+        function callIva() 
+		{
+			window.enableIVAasService = function () {
+                var resp = confData;
+                return JSON.parse(resp);
+            };
+            window.NITLaunchAgent("mobile");
+        }
+
+        function checkIvaInputs() 
+		{
+			if (confData.length == 0) 
+			{
+				setTimeout(function () { checkIvaInputs(); }, 1000);
+            }
+            else 
+			{
+				callIva();
+            }
+        }
+	</script>
+</head>
+<body>
+</body>
+</html>
